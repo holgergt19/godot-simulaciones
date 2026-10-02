@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/kenney_nature/tree_thin_fall.glb" id="1"]
+
+[sub_resource type="BoxShape3D" id="Shape_1"]
+size = Vector3(0.6804, 1.4903, 0.6165)
+
+[node name="tree_thin_fall" type="StaticBody3D"]
+
+[node name="Model" parent="." instance=ExtResource("1")]
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0828, 0.7451, 0.0568)
+shape = SubResource("Shape_1")

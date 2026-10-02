@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/kenney_nature/campfire_logs.glb" id="1"]
+
+[sub_resource type="BoxShape3D" id="Shape_1"]
+size = Vector3(0.2919, 0.0626, 0.2919)
+
+[node name="campfire_logs" type="StaticBody3D"]
+
+[node name="Model" parent="." instance=ExtResource("1")]
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0, 0.0313, 0.0)
+shape = SubResource("Shape_1")

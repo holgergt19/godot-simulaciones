@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/kenney_nature/crops_leafsStageA.glb" id="1"]
+
+[sub_resource type="BoxShape3D" id="Shape_1"]
+size = Vector3(0.3894, 0.4271, 0.3894)
+
+[node name="crops_leafs_stage_a" type="StaticBody3D"]
+
+[node name="Model" parent="." instance=ExtResource("1")]
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0, 0.2135, 0.0)
+shape = SubResource("Shape_1")

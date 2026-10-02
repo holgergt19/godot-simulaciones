@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/kenney_furniture/doorway.glb" id="1"]
+
+[sub_resource type="BoxShape3D" id="Shape_1"]
+size = Vector3(0.486, 1.0095, 0.1458)
+
+[node name="doorway" type="StaticBody3D"]
+
+[node name="Model" parent="." instance=ExtResource("1")]
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.243, 0.5048, -0.0162)
+shape = SubResource("Shape_1")

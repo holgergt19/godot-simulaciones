@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/kenney_furniture/televisionAntenna.glb" id="1"]
+
+[sub_resource type="BoxShape3D" id="Shape_1"]
+size = Vector3(0.2645, 0.1027, 0.08)
+
+[node name="television_antenna" type="StaticBody3D"]
+
+[node name="Model" parent="." instance=ExtResource("1")]
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0, 0.0514, -0.04)
+shape = SubResource("Shape_1")
